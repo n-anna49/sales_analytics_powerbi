@@ -16,27 +16,27 @@ Relationships were created between the five tables, as seen in the image below. 
 ### Table View
 A number of columns were added to aid in the visualization process. In **customers**, two new columns were added: orders_per_customer and customer_type.
 
+orders_per_customer fetches all orders purchased by a single customer.
 ```
 orders_per_customer = COUNTROWS(RELATEDTABLE(orders))
 ```
-orders_per_customer fetches all orders purchased by a single customer.
 
+customer_type checks the value of orders_per_customer, and if it's greater than 1, displays "Returning Customer", otherwise it displays "New Customer." This distinguishes customers that are first-time buyers from customers that have purchased more than a single order.
 ```
 customer_type = IF(customers[orders_per_customer] > 1, "Returning Customer", "New Customer")
 ```
-customer_type checks the value of orders_per_customer, and if it's greater than 1, displays "Returning Customer", otherwise it displays "New Customer." This distinguishes customers that are first-time buyers from customers that have purchased more than a single order.
 
 In **orders** two additional columns were also added: day_of_the_week_value and day_of_the_week.
 
+day_of_the_week_value extracts the day of the week in the order_date column and represents it as an integer (1 represents Sunday, 2 represents Monday, etc.).
 ```
 day_of_the_week_value = WEEKDAY(orders[order_date].[Date], 1)
 ```
-day_of_the_week_value extracts the day of the week in the order_date column and represents it as an integer (1 represents Sunday, 2 represents Monday, etc.).
 
+day_of_the_week formats the day of the week to just a 3-character string (Sun, Mon, etc.). This column was sorted by the day_of_the_week_value column to tie the integer to its string. This will aid in plotting the line chart in the dashboard to make sure the days of the week are in the correct order.
 ```
 day_of_the_week = FORMAT(orders[order_date], "ddd")
 ```
-day_of_the_week formats the day of the week to just a 3-character string (Sun, Mon, etc.). This column was sorted by the day_of_the_week_value column to tie the integer to its string. This will aid in plotting the line chart in the dashboard, seen below in the Report View section.
 
 ### Report View
 Six visualizations were created for this dashboard.
