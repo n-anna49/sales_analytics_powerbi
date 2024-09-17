@@ -1,7 +1,7 @@
 # Sales Analytics Dashboard in Power BI
 The following project is a sales analytics dashboard created in Power BI to display key insights on customer behavior. The [E-Commerce Data Sd](https://www.kaggle.com/datasets/danttis/e-commerce-data-sd?select=payments.csv) dataset was used for this project, and includes extensive data on sale orders, products, and customers.
 
-The dashboard can be viewed [here](https://github.com/n-anna49/sales_analytics_powerbi/blob/32f81fd1877e5b4410faaaea07564f7182401334/Power%20BI%20Sales%20Analytics%20Dashboard.pdf).
+The dashboard can be viewed [here](https://github.com/n-anna49/sales_analytics_powerbi/blob/60cf3fa7167914b5269457d77ff00efc00c2d210/Power%20BI%20Sales%20Analytics%20Dashboard.pdf).
 
 ## Data Processing
 In the Query Editor, rows with blank cells were removed and an inner join merge was performed on certain tables to make sure that any foreign key values that did not exist as primary keys in their respective tables were removed. 
