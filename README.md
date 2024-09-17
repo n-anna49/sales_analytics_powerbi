@@ -11,7 +11,7 @@ For example, the customer_id column in the **orders** table is a foreign key of 
 ## Data Visualization
 ### Model View
 Relationships were created between the five tables, as seen in the image below. Note that bi-directional cross-filtering was implemented between **order** and **order_items** to enable certain filters for visualizations.
-![Sales Analytics Model View](https://github.com/user-attachments/assets/cd45d33d-7771-45bb-8afe-15927562b817)
+![Sales Analytics Model View](https://github.com/user-attachments/assets/36d18141-b1ed-470a-b306-2f62cd71da03)
 
 ### Table View
 A number of columns were added to aid in the visualization process. In **customers**, two new columns were added: orders_per_customer and customer_type.
