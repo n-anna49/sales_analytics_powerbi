@@ -46,3 +46,6 @@ Six visualizations were created for this dashboard.
 - Horizontal Bar Chart: total sales by customer type.
 - Line Chart: total sales by day of the week.
 - Table: display of the most popular products, along with their item price and total revenue.
+
+![Sales Analytics Report View](https://github.com/user-attachments/assets/d479c416-7261-4100-8eaf-2c995e401ee8)
+
